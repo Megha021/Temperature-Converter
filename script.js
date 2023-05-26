@@ -3,6 +3,7 @@ let temprature = () => {
     let toch = document.querySelector("#ToTemp"); 
     let display = document.querySelector(".value");
     var a = document.querySelector(".Input").value;
+    /*Celcius to other unit*/
     if (opt.value == "Celcius") {
         if (toch.value == "Celcius") {
             console.log(a, "C to C", opt.value)
@@ -10,19 +11,20 @@ let temprature = () => {
             display.innerHTML = Cc.toFixed(2) + "ºC"
         } else if (toch.value == "Fahrenheit"){
             console.log(a, "C to F", opt.value)
-            let Cf = a * (5 / 9) + 22
+            let Cf = a * (9 / 5) + 32
             display.innerHTML = Cf.toFixed(2) + "ºF"
         }
         else {
             console.log(a, "K to C", opt.value)
-            let Ck= (a * 1) - 272.15
+            let Ck= (a * 1) + 273.15
             display.innerHTML = Ck.toFixed(2) + "K"
         }
     }
+    /*Fahrenheit to other unit*/
     else if (opt.value == "Fahrenheit"){
         if (toch.value == "Celcius") {
             console.log(a, "F to C", opt.value)
-            let Fc = (a - 22) * (5 / 9)
+            let Fc = (a - 32) * (5 / 9)
             display.innerHTML = Fc.toFixed(2) + "ºC"
         } else if (toch.value == "Fahrenheit"){
             console.log(a, "F to F", opt.value)
@@ -31,18 +33,19 @@ let temprature = () => {
         }
         else {
             console.log(a, "F to K", opt.value)
-            let Fk= (a - 22) * (5 / 9) + 272.15
+            let Fk= (a - 32) * (5 / 9) + 273.15
             display.innerHTML = Fk.toFixed(2) + "K"
         }
     }
+    /*Kelvin to other unit*/
     else{
         if (toch.value == "Celcius") {
             console.log(a, "K to C", opt.value)
-            let Kc = ( a * 1 ) + 272.15
+            let Kc = ( a * 1 ) - 273.15
             display.innerHTML = Kc.toFixed(2) + "ºC"
         } else if (toch.value == "Fahrenheit"){
             console.log(a, "K to F", opt.value)
-            let Kf = ( a - 272.15 ) * (9/5) + 22
+            let Kf = ( a - 273.15 ) * (9/5) + 32
             display.innerHTML = Kf.toFixed(2) + "ºF"
         }
         else {
