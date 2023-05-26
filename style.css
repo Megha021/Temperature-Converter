@@ -61,6 +61,17 @@ input[type="number"]{
     height:30px;
     font-size: 20px;
 }
+input[type=number]:focus {
+    -moz-outline-radius: 10px solid ;
+    outline-width: 98%;
+    outline-color: #253f4b;
+    border:none;
+    height:31px;
+}
+select:focus{
+    outline-color: #253f4b;
+}
+
 #unit{
     background: transparent;
     border: 2px solid #828283;
