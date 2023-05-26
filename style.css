@@ -146,7 +146,7 @@ span{
         clear:both;
     }
 }
-@media (max-width:380px){
+@media (max-width:480px){
     .container{
         width:100% ;
         height:100%;
